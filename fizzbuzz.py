@@ -1,18 +1,18 @@
-def fizz_buzz(num):
+def fizzbuzz(num):
   if num % 15 == 0:
-    print("FizzBuzz")
+    return "FizzBuzz"
   elif num % 5 == 0:
-    print("Buzz")
+    return "Buzz"
   elif num % 3 == 0:
-    print("Fizz")
+    return "Fizz"
   else:
-    print(num)
+    return num
 
-fizz_buzz(15)
+print(fizzbuzz(15))
 # FizzBuzz
-fizz_buzz(10)
+print(fizzbuzz(10))
 # Buzz
-fizz_buzz(6)
+print(fizzbuzz(6))
 # Fizz
-fizz_buzz(13)
+print(fizzbuzz(13))
 # 13
