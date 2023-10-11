@@ -10,3 +10,9 @@ class Task:
 
   def mark_completed(self):
     self.completed = True
+
+
+class User:
+  def __init__(self, user_id, name):
+    self.user_id = user_id
+    self.name = name
