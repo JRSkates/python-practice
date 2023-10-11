@@ -16,3 +16,15 @@ class User:
   def __init__(self, user_id, name):
     self.user_id = user_id
     self.name = name
+
+class TaskManager:
+  def __init__(self):
+    self.tasks = []
+
+  def add_task(self, task):
+    self.tasks.append(task)
+
+  def list_tasks(self, status=None):
+    if self.tasks is None:
+      return self.tasks
+    return [tasks for tasks in self.tasks if tasks.complete == status]
