@@ -17,6 +17,7 @@ class User:
     self.user_id = user_id
     self.name = name
 
+
 class TaskManager:
   def __init__(self):
     self.tasks = []
@@ -25,6 +26,9 @@ class TaskManager:
     self.tasks.append(task)
 
   def list_tasks(self, status=None):
-    if self.tasks is None:
-      return self.tasks
-    return [tasks for tasks in self.tasks if tasks.complete == status]
+    if status is None:
+        return self.tasks
+    elif status is False:
+      return [task for task in self.tasks if task.completed == False]
+    else:
+      return [task for task in self.tasks if task.completed == True]
