@@ -14,3 +14,8 @@ def test_multiply():
   calc = Calculator()
   result = calc.multiply(3, 5)
   assert result == 15
+
+def test_divide():
+  calc = Calculator()
+  result = calc.divide(10, 2) 
+  assert result == 5
