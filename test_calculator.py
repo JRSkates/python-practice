@@ -19,3 +19,8 @@ def test_divide():
   calc = Calculator()
   result = calc.divide(10, 2) 
   assert result == 5
+
+def test_raise_to_power_of():
+  calc = Calculator()
+  result = calc.raise_to_power_of(2, 4)
+  assert result == 16
