@@ -24,3 +24,8 @@ def test_raise_to_power_of():
   calc = Calculator()
   result = calc.raise_to_power_of(2, 4)
   assert result == 16
+
+def test_remainder():
+  calc = Calculator()
+  result = calc.remainder(2, 5)
+  assert result == 2
