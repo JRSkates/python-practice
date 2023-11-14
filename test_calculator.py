@@ -29,3 +29,15 @@ def test_remainder():
   calc = Calculator()
   result = calc.remainder(2, 5)
   assert result == 2
+
+def test_square_root():
+  calc = Calculator()
+  result = calc.square_root(25)
+  assert result == 5
+
+def test_square_root_of_negative_number():
+  calc = Calculator()
+  try:
+    calc.square_root(-4)
+  except ValueError as e:
+    assert str(e) == "Square root of a negative number is not allowed."
