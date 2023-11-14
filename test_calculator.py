@@ -41,3 +41,11 @@ def test_square_root_of_negative_number():
     calc.square_root(-4)
   except ValueError as e:
     assert str(e) == "Square root of a negative number is not allowed."
+
+def test_memory_operations():
+  calc = Calculator()
+  calc.add(10, 5)
+  calc.store_to_memory()
+  calc.subtract(8, 3)
+  calc.recall_from_memory()
+  assert calc.result == 15

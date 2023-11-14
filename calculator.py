@@ -39,3 +39,7 @@ class Calculator:
   
   def store_to_memory(self):
     self.memory = self.result
+
+  def recall_from_memory(self):
+    self.result = self.memory
+    return self.result
