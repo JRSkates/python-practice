@@ -36,3 +36,6 @@ class Calculator:
   def remainder(self, x, y):
     self.result = x % y
     return self.result
+  
+  def store_to_memory(self):
+    self.memory = self.result
