@@ -54,3 +54,7 @@ def test_trigonometric_functions():
   calc = Calculator()
   calc.sin(30)
   assert calc.result == 0.5
+  calc.cos(60)
+  assert calc.result == 0.5
+  calc.tan(45)
+  assert calc.result == 1
