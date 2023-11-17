@@ -49,3 +49,8 @@ def test_memory_operations():
   calc.subtract(8, 3)
   calc.recall_from_memory()
   assert calc.result == 15
+
+def test_trigonometric_functions():
+  calc = Calculator()
+  calc.sin(30)
+  assert calc.result == 0.5

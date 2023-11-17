@@ -31,15 +31,15 @@ class Calculator:
     return self.result
   
   def sin(self, x):
-    self.result = math.sin(math.radians(x))
+    self.result = round(math.sin(math.radians(x)), 1)
     return self.result
   
   def cos(self, x):
-    self.result = math.cos(math.radians(x))
+    self.result = round(math.cos(math.radians(x)), 1)
     return self.result
   
   def tan(self, x):
-    self.result = math.tan(math.radians(x))
+    self.result = round(math.tan(math.radians(x)), 1)
     return self.result
 
   def raise_to_power_of(self, x, y):
