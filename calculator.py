@@ -1,4 +1,5 @@
 import math
+import re
 
 class Calculator:
   def __init__(self):
@@ -27,6 +28,18 @@ class Calculator:
     if x < 0:
       raise ValueError("Square root of a negative number is not allowed.")
     self.result = math.sqrt(x)
+    return self.result
+  
+  def sin(self, x):
+    self.result = math.sin(math.radians(x))
+    return self.result
+  
+  def cos(self, x):
+    self.result = math.cos(math.radians(x))
+    return self.result
+  
+  def tan(self, x):
+    self.result = math.tan(math.radians(x))
     return self.result
 
   def raise_to_power_of(self, x, y):
