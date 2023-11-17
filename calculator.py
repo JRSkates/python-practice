@@ -63,6 +63,9 @@ class Calculator:
     self.result = x % y
     return self.result
   
+  def clear_memory(self):
+    self.memory = 0
+  
   def store_to_memory(self):
     self.memory = self.result
 
