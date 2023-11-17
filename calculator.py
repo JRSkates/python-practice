@@ -41,6 +41,19 @@ class Calculator:
   def tan(self, x):
     self.result = round(math.tan(math.radians(x)), 1)
     return self.result
+  
+  def calculate_expression(self, expression):
+    allowed_chars = "0123456789+-*/(). "
+    if any(char not in allowed_chars for char in expression):
+      raise ValueError("Invalid characters in the expression.")
+    
+    if expression.count("(") != expression.count(")"):
+      raise ValueError("Unbalanced parentheses in the expression.")
+    
+    expression = expression.replace("^", "**")
+
+    self.result = eval(expression)
+    return self.result
 
   def raise_to_power_of(self, x, y):
     self.result = x**y

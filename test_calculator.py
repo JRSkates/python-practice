@@ -58,3 +58,8 @@ def test_trigonometric_functions():
   assert calc.result == 0.5
   calc.tan(45)
   assert calc.result == 1
+
+def test_calculate_expression():
+  calc = Calculator()
+  result = calc.calculate_expression("(5 + 3) * 2 - 4 / 2")
+  assert result == 14
