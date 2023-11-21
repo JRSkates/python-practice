@@ -81,4 +81,8 @@ def test_ln():
   calc = Calculator()
   calc.ln(2.71828)
   assert round(calc.result, 5) == 1
-  
+
+def test_log():
+  calc = Calculator()
+  calc.log(100, 10)
+  assert round(calc.result, 5) == 2
