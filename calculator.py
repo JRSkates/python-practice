@@ -68,6 +68,18 @@ class Calculator:
       raise ValueError("Factorial is not defined for negative numbers.")
     self.result = math.factorial(x)
     return self.result
+  
+  def ln(self, x):
+    if x <= 0:
+      raise ValueError("Natural logarithm is not defined for non-positive numbers.")
+    self.result = math.log(x)
+    return self.result
+  
+  def log(self, x, base):
+    if x <= 0 or base <= 0 or base == 1:
+      raise ValueError("Logarithm is not defined for non-positive numbers or base 1.")
+    self.result = math.log(x, base)
+    return self.result
 
   def clear_memory(self):
     self.memory = 0

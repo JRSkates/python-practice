@@ -76,3 +76,9 @@ def test_factorial():
   calc = Calculator()
   calc.factorial(5)
   assert calc.result == 120
+
+def test_ln():
+  calc = Calculator()
+  calc.ln(2.71828)
+  assert round(calc.result, 5) == 1
+  
