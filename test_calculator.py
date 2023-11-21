@@ -71,3 +71,8 @@ def test_memory_clear():
   calc.clear_memory()
   calc.recall_from_memory()
   assert calc.result == 0
+
+def test_factorial():
+  calc = Calculator()
+  calc.factorial(5)
+  assert calc.result == 120

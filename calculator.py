@@ -63,6 +63,12 @@ class Calculator:
     self.result = x % y
     return self.result
   
+  def factorial(self, x):
+    if x < 0:
+      raise ValueError("Factorial is not defined for negative numbers.")
+    self.result = math.factorial(x)
+    return self.result
+
   def clear_memory(self):
     self.memory = 0
   
