@@ -91,3 +91,8 @@ def test_pi():
   calc = Calculator()
   calc.pi()
   assert round(calc.result, 5) == 3.14159
+
+def test_e():
+  calc = Calculator()
+  calc.e()
+  assert round(calc.result, 5) == 2.71828

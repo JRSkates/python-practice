@@ -84,6 +84,10 @@ class Calculator:
   def pi(self):
     self.result = math.pi
     return self.result
+  
+  def e(self):
+    self.result = math.e
+    return self.result
 
   def clear_memory(self):
     self.memory = 0
