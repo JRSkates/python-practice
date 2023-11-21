@@ -80,6 +80,10 @@ class Calculator:
       raise ValueError("Logarithm is not defined for non-positive numbers or base 1.")
     self.result = math.log(x, base)
     return self.result
+  
+  def pi(self):
+    self.result = math.pi
+    return self.result
 
   def clear_memory(self):
     self.memory = 0

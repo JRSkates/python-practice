@@ -86,3 +86,8 @@ def test_log():
   calc = Calculator()
   calc.log(100, 10)
   assert round(calc.result, 5) == 2
+
+def test_pi():
+  calc = Calculator()
+  calc.pi()
+  assert round(calc.result, 5) == 3.14159
