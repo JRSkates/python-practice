@@ -101,3 +101,4 @@ class Calculator:
 
 
 # More to add 
+# Will be added to a full Django Fullstack Project
