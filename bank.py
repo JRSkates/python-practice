@@ -17,3 +17,15 @@ class Bank:
     else:
       print("account or account type doesn't exist")
       return False # account or account type doesn't exist
+    
+  def withdraw(self, account_number, account_type, amount):
+    if account_number in self.accounts and account_type in self.accounts[account_number]:
+      if self.accounts[account_number][account_type] >= amount:
+        self.accounts[account_number][account_type] -= amount
+        return True
+      else:
+        print("Insufficient funds")
+        return False # Insufficient funds
+    else:
+      print("account or account type doesn't exist")
+      return False # account or account type doesn't exist
