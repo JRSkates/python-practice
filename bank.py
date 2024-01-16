@@ -29,3 +29,16 @@ class Bank:
     else:
       print("account or account type doesn't exist")
       return False # account or account type doesn't exist
+    
+  def transfer(self, from_account, to_account, amount, account_type):
+    if from_account in self.accounts and to_account in self.accounts and account_type in self.accounts[from_account]:
+      if self.accounts[from_account][account_type] >= amount:
+        self.accounts[from_account][account_type] -= amount
+        self.accounts[to_account][account_type] += amount
+        return True
+      else:
+        print("Insufficient funds")
+        return False # Insufficient funds
+    else:
+      print("account or account type doesn't exist")
+      return False # account or account type doesn't exist
