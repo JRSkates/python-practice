@@ -9,3 +9,11 @@ class Bank:
     else:
       print("Account already exists: %s", account_number)
       return False # account already exists
+    
+  def deposit(self, account_number, account_type, amount):
+    if account_number in self.accounts and account_type in self.accounts[account_number]:
+      self.accounts[account_number][account_type] += amount
+      return True
+    else:
+      print("account or account type doesn't exist")
+      return False # account or account type doesn't exist
