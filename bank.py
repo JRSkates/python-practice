@@ -42,3 +42,8 @@ class Bank:
     else:
       print("account or account type doesn't exist")
       return False # account or account type doesn't exist
+    
+  def check_balance(self, account_number, account_type):
+    if account_number in self.accounts and account_type in self.accounts[account_number]:
+      return self.accounts[account_number][account_type]
+    return None

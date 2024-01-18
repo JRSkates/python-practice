@@ -33,3 +33,9 @@ def test_transfer():
     assert bank.transfer("11111", "22222", 250, "savings") == False  # Insufficient funds
     assert bank.transfer("11111", "33333", 50, "checking") == False  # To account doesn't exist
 
+def test_check_balance():
+    bank = Bank()
+    bank.create_account("44444", initial_balance=500)
+    assert bank.check_balance("44444", "checking") == 500
+    assert bank.check_balance("44444", "savings") == 0
+    assert bank.check_balance("54444", "checking") == None
