@@ -53,3 +53,9 @@ class Bank:
       self.accounts[account_number][account_type] *= (1 + interest_rate)
       return True
     return False
+
+  def close_account(self, account_number):
+    if account_number in self.accounts:
+      del self.accounts[account_number]
+      return True
+    return False

@@ -45,3 +45,10 @@ def test_apply_interest():
     bank.create_account("66666", initial_balance=1000)
     bank.apply_interest("66666", "checking", 0.05) # 5% interest applied
     bank.check_balance("66666", "checking") == 1050
+
+def test_close_account():
+    bank = Bank()
+    bank.create_account("77777", initial_balance=500)
+    bank.close_account("77777")
+    assert "77777" not in bank.accounts
+    assert bank.close_account("88888") == False # Non existent account
