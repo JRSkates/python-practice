@@ -47,3 +47,9 @@ class Bank:
     if account_number in self.accounts and account_type in self.accounts[account_number]:
       return self.accounts[account_number][account_type]
     return None
+  
+  def apply_interest(self, account_number, account_type, interest_rate):
+    if account_number in self.accounts and account_type in self.accounts[account_number]:
+      self.accounts[account_number][account_type] *= (1 + interest_rate)
+      return True
+    return False

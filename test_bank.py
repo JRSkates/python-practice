@@ -39,3 +39,9 @@ def test_check_balance():
     assert bank.check_balance("44444", "checking") == 500
     assert bank.check_balance("44444", "savings") == 0
     assert bank.check_balance("54444", "checking") == None
+
+def test_apply_interest():
+    bank = Bank()
+    bank.create_account("66666", initial_balance=1000)
+    bank.apply_interest("66666", "checking", 0.05) # 5% interest applied
+    bank.check_balance("66666", "checking") == 1050
