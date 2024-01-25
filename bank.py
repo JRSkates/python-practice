@@ -46,7 +46,7 @@ class Bank:
   def check_balance(self, account_number, account_type):
     if account_number in self.accounts and account_type in self.accounts[account_number]:
       return self.accounts[account_number][account_type]
-    return None
+    return None # could be refactored
   
   def apply_interest(self, account_number, account_type, interest_rate):
     if account_number in self.accounts and account_type in self.accounts[account_number]:
